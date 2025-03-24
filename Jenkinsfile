@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'vendor\\bin\\phpunit'
+                bat '/var/www/your-project/vendor/bin/phpunit'
             }
             post {
                 success {
