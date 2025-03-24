@@ -14,13 +14,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'composer install --no-dev --optimize-autoloader --no-scripts'
+                powershell 'composer install --no-dev --optimize-autoloader --no-scripts'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'vendor\\bin\\phpunit'
+                powershell 'vendor\\bin\\phpunit'
             }
             post {
                 success {
