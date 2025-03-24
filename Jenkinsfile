@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'composer install --no-dev --optimize-autoloader'
+                bat 'composer install --no-dev --optimize-autoloader --no-scripts'
             }
         }
 
